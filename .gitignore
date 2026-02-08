@@ -1,0 +1,36 @@
+# Local Data
+market_data_15/
+market_data_daily/
+
+# Excluded Scripts
+src/continuation_screener/data/massive_download.py
+src/continuation_screener/screener/run_screener_bt_1year.py
+src/continuation_screener/simulator/run_backtester_1year.py
+src/continuation_screener/utils/multiindex.py
+
+# Environments
+venv/
+.venv/
+
+# Python local cache
+__pycache__/
+*.py[cod]
+
+# Build and Metadata
+build/
+dist/
+*.egg-info/
+
+# Local Data
+*.csv
+*.parquet
+
+!backtest_summary_2023_to_2026.csv
+!backtest_summary_2025_to_2026.csv
+!backtest_trades_2023_to_2026.csv
+!backtest_trades_2025_to_2026.csv
+
+# Other
+.vscode/
+.idea/
+.DS_Store

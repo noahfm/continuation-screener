@@ -1,0 +1,19 @@
+CORE DATA PROCESSING
+pandas>=2.2.0
+numpy>=1.26.0
+
+FINANCIAL DATA TOOLS
+yfinance>=0.2.40
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+UTILITIES
+tqdm>=4.66.0
+lxml>=5.1.0
+python-dateutil
+
+PLOTTING
+matplotlib>=3.8.0
+
+TESTING
+pytest>=8.0.0

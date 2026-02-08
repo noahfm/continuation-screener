@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "continuation_screener"
+version = "0.1.0"
+description = "Russell 3000 Pattern Screener and Backtester."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.2.0", "numpy>=1.26.0", "yfinance>=0.2.40", "requests>= 2.31.0", "tqdm", "lxml"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
