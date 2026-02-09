@@ -146,7 +146,7 @@ if __name__ == '__main__':
     print('\n---TRADES INFO---')
     print(trades)
             
-#'12/06/25', '01/22/26'
+
             
         
 
