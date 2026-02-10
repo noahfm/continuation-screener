@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import yfinance as yf
+import pytz
 from tqdm import tqdm
 from datetime import datetime, timedelta
 
@@ -25,11 +26,12 @@ def run_screener(as_of_date=None):
         return pd.DataFrame()
 
     if as_of_date is None:
-        now = datetime.now()
-        if now.hour < 16:
-            as_of_date = (pd.Timestamp.today() - pd.offsets.BusinessDay(1)).normalize()
+        now_ny = datetime.now(pytz.timezone('US/Eastern'))
+                              
+        if now_ny.hour < 16:
+            as_of_date = (pd.Timestamp(now_ny.date()) - pd.offsets.BusinessDay(1)).normalize()
         else:
-            as_of_date = pd.Timestamp.today().normalize()
+            as_of_date = pd.Timestamp(now_ny.date()).normalize()
 
     else:
         as_of_date = pd.to_datetime(as_of_date).normalize()
