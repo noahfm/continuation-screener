@@ -38,13 +38,13 @@ The strategy was backtested across the Russell 3000 universe using a dual-timefr
 
 | Metric | 2023 - 2026 (Full) | 2025 - 2026 (Recent) |
 | :--- | :--- | :--- |
-| **Total Trades** | 289 | 94 |
-| **Win Rate** | 33.56% | 34.04% |
-| **Avg Win %** | 3.20% | 3.80% |
-| **Profit Factor** | 1.61 | 1.52 |
-| **Expectancy (Per Trade)** | 0.32% | **0.49%** |
-| **Est. Annual Return** | 31.80% | **49.53%** |
-| **Annualized Sharpe Ratio** | 1.09 | **1.69** |
+| **Total Trades** | 116 | 39 |
+| **Win Rate** | 37.07% | 38.46% |
+| **Avg Win %** | 4.03% | 3.65% |
+| **Profit Factor** | 2.78 | 1.61 |
+| **Expectancy (Per Trade)** | **0.92%** | 0.67% |
+| **Est. Annual Return** | **36.22%** | 27.72% |
+| **Annualized Sharpe Ratio** | **1.91** | 1.32 |
 
 
 
@@ -52,10 +52,9 @@ The strategy was backtested across the Russell 3000 universe using a dual-timefr
 
 ### Tactical Observations
 
-* **Positive Skew:** A key to the strategy is prioritizing quality wins. Consequently, the strategy maintains a 'Fat Tail' distribution. While the win rate sits at ~34%, the average winning trade is significantly larger than the average loss, ensuring the equity curve remains upward-sloping. Notice that this is ensured by entry near EMA 9, and therefore an entry near the Stop.
-* **Momentum Efficiency:** The jump in **Sharpe Ratio (1.69)** during the 2025–2026 period suggests that the "Stacked EMA" filter is highly effective at capturing alpha in the current high-volatility environment, although the strategy maintains outperformance compared with SPY over the same period.
-* **Risk-Adjusted Outperformance:** Clearing a Sharpe of 1.0 being the industry benchmark for a professional-grade strategy, I am more than pleased with the results. Reaching 1.69 indicates that the strategy provides high returns relative to the risk (volatility) taken. The longer term 1.09 indicates a more consistent return over a more steady growth period. This insinuates that the strategy in fact benefitted from the V-shaped dip and recovery of early to mid 2025.
-
+* **Positive Skew:** The strategy maintains an elite 4.4-to-1 Reward-to-Risk ratio. By entering on the EMA reclaim and capping losses at $\approx 1\%$, the average win (4.03%) dwarfing the average loss (0.91%) ensures a robust, upward-sloping equity curve even with an approximately **37% win rate**.
+* **Momentum Efficiency:** A 1.91 Sharpe Ratio over the verified 3-year backtest significantly exceeds the professional benchmark of 1.0. This suggests the "Stacked EMA" filter and Macro SPY filter successfully side-step choppy regimes, providing high returns relative to the volatility taken.
+* **Risk-Adjusted Outperformance:** Clearing a Sharpe of 1.0 as the industry benchmark for a professional-grade strategy, the verified results are exceptional. Reaching a Sharpe of 1.91 indicates that the strategy provides high returns relative to the volatility taken. This long-term consistency, paired with a Profit Factor of 2.78, proves the strategy is not just lucky but structurally sound. It successfully capitalized on the sustained momentum of 2023 and the V-shaped recovery periods of 2025, maintaining an upward-sloping equity curve across multiple market regimes.
 ### Audit Logs
 The full trade-by-trade execution logs for these periods are available for review in the root directory:
 * `backtest_trades_2023_to_2026.csv`
