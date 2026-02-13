@@ -1,11 +1,11 @@
 Metric,Value,Note
-Total Trades,289,
-Win Rate,33.56%,
-Avg Win %,3.20%,
-Avg Loss %,-1.13%,
-Profit Factor (Gross),1.61,
-Expectancy (Per Trade),0.32%,
-Est. Annual Return,31.80%,Compare to 5% bond
-Cumulative Net ($),152.52,Total profit per 1 share traded
-Est. Option Gain($),$9352.08,"Based on $1k pos, 0.5 delta, 10x leverage"
-Annualized Sharpe Ratio,1.09,Sharpe Ratio(excess return per unit of risk vs. 5% bond
+Total Trades,116,
+Win Rate,37.07%,
+Avg Win %,4.03%,
+Avg Loss %,-0.91%,
+Profit Factor (Gross),2.78,
+Expectancy (Per Trade),0.92%,
+Est. Annual Return,36.22%,Compare to 5% bond
+Cumulative Net ($),135.03,Total profit per 1 share traded
+Est. Option Gain($),$10740.27,"Based on $1k pos, 0.5 delta, 10x leverage"
+Annualized Sharpe Ratio,1.91,Sharpe Ratio(excess return per unit of risk vs. 5% bond
