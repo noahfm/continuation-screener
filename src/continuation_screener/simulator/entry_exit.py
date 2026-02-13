@@ -1,7 +1,7 @@
 import pandas as pd
 import time
 
-def entry(intraday_df, daily_df, debug=False):
+def entry(intraday_df, daily_df, debug=False, mode='backtest'):
     """
     Returns Entry markers based on EMA reclaim.
     Testing found that for this strategy, bounces tend to result
@@ -11,6 +11,18 @@ def entry(intraday_df, daily_df, debug=False):
     if intraday_df.empty or daily_df.empty:
         if debug: print('empty dataframes')
         return None, None, None
+
+    if mode == 'backtest':
+        today_date = intraday_df.index[0].normalize()
+    else:  
+        today_date = intraday_df.index[-1].normalize()
+
+    intraday_df = intraday_df[intraday_df.index.normalize() == today_date].copy()
+
+    if intraday_df.empty:
+        if debug:
+            print(f'No intraday data for {today_date}')
+            return None, None, None
 
     entry_day = intraday_df.index[0].normalize()
 
